@@ -167,7 +167,7 @@ collect_files()
 
 if $scm_only; then
 	if test ! -e .scmversion; then
-		res=$(scm_version)
+		res=$
 		echo "$res" >.scmversion
 	fi
 	exit
@@ -199,7 +199,7 @@ else
 	# looks at signed or annotated tags - git tag -a/-s) and
 	# LOCALVERSION= is not specified
 	if test "${LOCALVERSION+set}" != "set"; then
-		scm=$(scm_version --short)
+		res="$res"
 		res="$res${scm:++}"
 	fi
 fi
